@@ -1,6 +1,5 @@
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const webpack = require('webpack');
 
 const assetsPath = 'assets';
 
@@ -70,7 +69,7 @@ module.exports = {
 	},
 	plugins: [
 		new VueLoaderPlugin(),
-		new webpack.EnvironmentPlugin(['BUILD'])
+		// new webpack.EnvironmentPlugin(['BUILD'])
 	],
 	node: false
 };
