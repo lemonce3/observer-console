@@ -10,11 +10,11 @@
       :fields="[{
         key: 'id',
         label: $t('message.table.id'),
-        class: 'table-width'
+        class: 'w-50'
       },{
         key: 'master',
         label: $t('message.table.master'),
-        class: 'table-width'
+        class: 'w-50'
       }]"
     />
     <b-pagination
@@ -57,9 +57,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.table-width {
-  width: 50%
-}
-</style>

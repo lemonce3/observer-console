@@ -11,22 +11,22 @@
         {
           key: 'id',
           label: $t('message.table.id'),
-          class: 'table-width'
+          class: 'w-25'
         },
         {
           key: 'name',
           label: $t('message.table.name'),
-          class: 'table-width'
+          class: 'w-25'
         }, 
         {
           key: 'args',
           label: $t('message.table.args'),
-          class: 'table-width'
+          class: 'w-25'
         }, 
         {
           key: 'details',
           label: $t('message.table.details'),
-          class: 'table-width'
+          class: 'w-25'
         },
       ]"
     >
@@ -78,7 +78,6 @@ export default {
         this.handleData();
       }, 1000),
       keepedCard: []
-      // newTableData: []
     };
   },
   methods: {
@@ -128,9 +127,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.table-width {
-  width: 25%;
-}
-</style>

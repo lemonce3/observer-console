@@ -27,7 +27,8 @@ module.exports = merge(webpackBase, {
 		proxy: {
 			// '/api': 'http://192.168.31.234:8090',
 			'/api': 'http://localhost:8080'
-		}
+		},
+		host: '0.0.0.0'
 	},
 	plugins: [
 		new HtmlWebpackPlugin({

@@ -9,7 +9,7 @@ export const message = {
 	table: {
 		id: 'ID',
 		master: '主机',
-		agent: '代理',
+		agents: '代理',
 		name: '名称',
 		args: '参数',
 		returnValue: '返回值',

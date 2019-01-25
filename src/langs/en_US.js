@@ -9,7 +9,7 @@ export const message = {
 	table: {
 		id: 'ID',
 		master: 'Master',
-		agent: 'Agent',
+		agents: 'Agents',
 		name: 'Name',
 		args: 'Args',
 		returnValue: 'Return Value',

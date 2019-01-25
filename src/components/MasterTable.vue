@@ -10,14 +10,35 @@
       :fields="[{
         key: 'id',
         label: $t('message.table.id'),
-        class: 'table-width'
+        class: 'w-50'
         },
         {
           key: 'agents',
-          label: $t('message.table.agent'),
-          class: 'table-width'
+          label: $t('message.table.agents'),
+          class: 'w-50'
         }]"
-    />
+    >
+      <template slot="agents" slot-scope="data">
+        <b-button
+          size="sm"
+          @click.stop="data.toggleDetails"
+          class="mr-2"
+          v-if="data.item.agents.length > 1"
+        >{{ data.detailsShowing ? $t('message.btn.hide') : $t('message.btn.show')}}</b-button>
+        <template v-else>{{ data.item.agents[0] }}</template>
+      </template>
+      <template slot="row-details" slot-scope="data">
+        <b-card no-body>
+          <b-list-group class="d-block" flush>
+            <b-list-group-item
+              v-for="item in data.item.agents"
+              :key="item.id"
+              class="w-50 p-2 float-left"
+            >{{ item }}</b-list-group-item>
+          </b-list-group>
+        </b-card>
+      </template>
+    </b-table>
     <b-pagination
       size="sm"
       :total-rows="tableData.length"
@@ -39,8 +60,8 @@ export default {
       tableData: [],
       perPage: 10,
       update: setInterval(() => {
-      this.handleData();
-    }, 1000)
+        this.handleData();
+      }, 1000)
     };
   },
   methods: {
@@ -58,9 +79,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.table-width {
-  width: 50%
-}
-</style>
